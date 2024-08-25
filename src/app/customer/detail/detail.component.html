@@ -1,0 +1,9 @@
+
+<div>
+    <div *ngIf="customer">
+        <h3>{{customer.name}}</h3>
+        <p>{{customer.address}}</p>
+        <p>{{customer.phone}}</p>
+    </div>
+    <button (click)="selectCustomer(this.customer)">Back</button>
+</div>
