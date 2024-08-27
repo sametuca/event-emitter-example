@@ -19,7 +19,8 @@ export class DetailComponent {
     }
 
     @Output() onCustomerSelected = new EventEmitter<Customer>();
-
+    @Output() buttonClicked = new EventEmitter<void>();
+    
     public customer:Customer = {
       id: 1,
       name: "John",
@@ -30,6 +31,10 @@ export class DetailComponent {
     public selectCustomer(customer: Customer) {
         this.customer = customer;
         this.onCustomerSelected.emit(customer);
+    }
+
+    clickButton() {
+        this.buttonClicked.emit();
     }
 
 }

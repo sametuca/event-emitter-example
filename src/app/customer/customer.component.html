@@ -1,7 +1,9 @@
 <p>customer works!</p>
 
-<app-detail (onCustomerSelected)="onCustomerSelected($event)"></app-detail>
+<app-detail (onCustomerSelected)="onCustomerSelected($event)" (buttonClicked)="handleChildButtonClicked()"></app-detail>
 
 {{customerListener.address}}
 {{customerListener.name}}
 {{customerListener.phone}}
+
+<p *ngIf="buttonWasClicked">Button was clicked!</p>

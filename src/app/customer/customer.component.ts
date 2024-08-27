@@ -21,8 +21,13 @@ export class CustomerComponent {
     
   }
   customerListener!: Customer;
-onCustomerSelected($event: Customer) {
+  onCustomerSelected($event: Customer) {
   this.customerListener = $event;
+}
+buttonWasClicked:boolean = false;
+handleChildButtonClicked(){
+  this.buttonWasClicked = true;
+  console.log('Button was clicked');
 }
 
 }
